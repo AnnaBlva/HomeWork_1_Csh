@@ -1,43 +1,63 @@
-﻿
+﻿// Задача 10: Напишите программу, которая принимает на вход 
+// трёхзначное число и на выходе показывает вторую цифру этого числа.
 
-// Задача 2: Напишите программу, которая на вход принимает два числа
-//  и выдаёт, какое число большее, а какое меньшее.
+// 456 -> 5
+// 782 -> 8
+// 918 -> 1
 
-// a = 5; b = 7 -> max = 7
-// a = 2 b = 10 -> max = 10
-// a = -9 b = -3 -> max = -3
+// Console.Write("Введите трехзначное число: ");
+// int number = Convert.ToInt32(Console.ReadLine());
+// int n2 = number % 100 / 10;
+// Console.WriteLine($"{number} ");
+// Console.WriteLine($"{n2} ");
 
-// Console.Write("Введите число a : ");
-// int numberA = Convert.ToInt32(Console.ReadLine());
 
-// Console.Write("Введите число b: ");
-// int numberB = Convert.ToInt32(Console.ReadLine());
-// if (numberA > numberB)
+// Задача 13: Напишите программу, которая выводит третью цифру 
+// заданного числа или сообщает, что третьей цифры нет.
+
+// 645 -> 5
+// 78 -> третьей цифры нет
+// 32679 -> 6
+
+
+// Console.Write("Введите число: ");
+// int num = Convert.ToInt32(Console.ReadLine());
+// int num = Math.Abs(num);
+// int lenghtNb = 0;
+// int result = nb1;
+// while (result > 0)
 // {
-//     Console.WriteLine($"Число {numberA} является большим, а число {numberB} - меньшим");
+//     result = result / 10;
+//     lenghtNb++;
 // }
-// else
+// int [] arr = new int [lenghtNb];
+// for (int i = 0; i < lenghtNb; i++)
+// { 
+//     arr [i] = nb1 % 10;
+//     nb1 /= 10;
+// }
+
+
+// Задача 15: Напишите программу, которая принимает на вход цифру,
+// обозначающую день недели, и проверяет, 
+// является ли этот день выходным.
+
+// 6 -> да
+// 7 -> да
+// 1 -> нет
+
+
+// Console.Write("Введите номер дня недели: ");
+// int daynumber = Convert.ToInt32(Console.ReadLine());
+// if (daynumber < 1 || daynumber > 7)
 // {
-//     Console.WriteLine($"Число {numberB} является большим, а число {numberA} - меньшим");
+//     Console.WriteLine($"Дня недели под таким номером не существует");
 // }
-
-
-// Задача 6: Напишите программу, которая на вход принимает число 
-// и выдаёт, является ли число чётным (делится ли оно на два 
-// без остатка).
-
-// 4 -> да
-// -3 -> нет
-// 7 -> нет
-
-Console.Write("Введите число: ");
-int number = Convert.ToInt32(Console.ReadLine());
-
-if (number / 2)
-{
-    Console.WriteLine($"Число {number} делится без остатка");
-}
-else if (number % 2)
-{
-    Console.WriteLine($"Число {number} делится с остатком");
-}
+// else if (daynumber >= 6 && daynumber <=7)
+// {
+//     Console.WriteLine($"День недели под номером {daynumber} является выходным днем");
+// }
+// else 
+// {
+//     Console.WriteLine($"День недели под номером {daynumber} является будним днем");
+// }
