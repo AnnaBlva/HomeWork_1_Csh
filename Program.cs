@@ -1,81 +1,43 @@
-﻿// See https://aka.ms/new-console-template for more information
+﻿
 
+// Задача 2: Напишите программу, которая на вход принимает два числа
+//  и выдаёт, какое число большее, а какое меньшее.
 
-// int numberA = 123;
-// string userName = "Bob"; 
+// a = 5; b = 7 -> max = 7
+// a = 2 b = 10 -> max = 10
+// a = -9 b = -3 -> max = -3
 
-// Console.WriteLine("Hello, World!");
-// Console.Write(numberA);
-// Console.Write(userName);
-// Console.WriteLine();
-// Console.Write("Введите имя пользователя: ");
-// string name = Console.ReadLine();
-// Console.WriteLine($"Имя пользователя {numberA + 100} компьютера {name}");
+// Console.Write("Введите число a : ");
+// int numberA = Convert.ToInt32(Console.ReadLine());
 
-// Console.Write("Введите возраст пользователя: ");
-// int age = Convert.ToInt32(Console.ReadLine());
-// Console.WriteLine($"Имя пользователя {numberA + 100} компьютера {name}. А его возраст {age + 2} лет");
-
-// string num1 = Console.ReadLine();
-// string num2 = Console.ReadLine();
-// Console.Write($"  {num1 + num2}");
-
-// Напишите программу, которая на вход прининает число и выдает его квадрат
-
-// Console.Write("Введите число: ");
-// int number = Convert.ToInt32(Console.ReadLine());
-// int result = number * number;
-// Console.WriteLine($"Квадрат {number} = {result}");
-
-// Console.Write("Введите число 1 : ");
-// int number1 = Convert.ToInt32(Console.ReadLine());
-
-// Console.Write("Введите число 2: ");
-// int number2 = Convert.ToInt32(Console.ReadLine());
-// if (number1 > number2)
+// Console.Write("Введите число b: ");
+// int numberB = Convert.ToInt32(Console.ReadLine());
+// if (numberA > numberB)
 // {
-//     Console.WriteLine($"Квадрат {number1} = {number1 * number1}");
+//     Console.WriteLine($"Число {numberA} является большим, а число {numberB} - меньшим");
 // }
 // else
 // {
-//     Console.WriteLine($"Квадрат {number2} = {number2 * number2}");
+//     Console.WriteLine($"Число {numberB} является большим, а число {numberA} - меньшим");
 // }
 
-// index = index + 1;
-// index += 1;
-// index++;
 
-// написать программу, которая на вход принимает два числа и проверяет, 
-// является ли первое число квадратом второго
+// Задача 6: Напишите программу, которая на вход принимает число 
+// и выдаёт, является ли число чётным (делится ли оно на два 
+// без остатка).
 
-// Console.Write("Введите число 1 : ");
-// int number1 = Convert.ToInt32(Console.ReadLine());
+// 4 -> да
+// -3 -> нет
+// 7 -> нет
 
-// Console.Write("Введите число 2: ");
-// int number2 = Convert.ToInt32(Console.ReadLine());
-// if (number1 == number2 * number2)
-// {
-//     Console.WriteLine($"Число {number1} является квадратом числа {number2}");
-// }
-// else
-// {
-//     Console.WriteLine($"Число {number1} не является квадратом числа {number2}");
-// }
+Console.Write("Введите число: ");
+int number = Convert.ToInt32(Console.ReadLine());
 
-// Напишите программу, которая будет выдавать название 
-// дня недели по заданному номеру
-
-Console.Write("Введите номер дня недели: ");
-int weeknum = Convert.ToInt32(Console.ReadLine());
-if (weeknum == 3)
+if (number / 2)
 {
-    Console.WriteLine($"Среда");
+    Console.WriteLine($"Число {number} делится без остатка");
 }
-else if (weeknum == 1)
+else if (number % 2)
 {
-    Console.WriteLine($"Понедельник");
-}
-else
-{
-    Console.WriteLine($"Нет данных");
+    Console.WriteLine($"Число {number} делится с остатком");
 }
