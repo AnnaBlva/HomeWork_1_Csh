@@ -1,63 +1,72 @@
-﻿// Задача 10: Напишите программу, которая принимает на вход 
-// трёхзначное число и на выходе показывает вторую цифру этого числа.
+﻿// Задача 21
+// Напишите программу, которая принимает на вход координаты 
+// двух точек и находит расстояние между ними в 3D пространстве.
 
-// 456 -> 5
-// 782 -> 8
-// 918 -> 1
+// A (3,6,8); B (2,1,-7), -> 15.84
+// A (7,-5, 0); B (1,-1,9) -> 11.53
 
-// Console.Write("Введите трехзначное число: ");
+// Console.WriteLine("Введите X первой точки ");
+// int X1 = Convert.ToInt32(Console.ReadLine());
+// Console.WriteLine("Введите Y первой точки ");
+// int Y1 = Convert.ToInt32(Console.ReadLine());
+// Console.WriteLine("Введите Z первой точки ");
+// int Z1 = Convert.ToInt32(Console.ReadLine());
+// Console.WriteLine("Введите X второй точки ");
+// int X2 = Convert.ToInt32(Console.ReadLine());
+// Console.WriteLine("Введите Y второй точки ");
+// int Y2 = Convert.ToInt32(Console.ReadLine());
+// Console.WriteLine("Введите Z ворой точки ");
+// int Z2 = Convert.ToInt32(Console.ReadLine());
+
+// Console.WriteLine(Math.Round(Math.Sqrt(Math.Pow((X2-X1),2) + Math.Pow((Y2-Y1),2) + Math.Pow((Z2-Z1),2)),2));
+
+
+// Задача 23
+// Напишите программу, которая принимает на вход число (N) 
+// и выдаёт таблицу кубов чисел от 1 до N.
+
+// 3 -> 1, 8, 27
+// 5 -> 1, 8, 27, 64, 125
+
+// Console.WriteLine("Введите число N ");
+// int n = Convert.ToInt32 (Console.ReadLine());
+// for (int i = 1; i <= n; i++)
+// {
+//     Console.WriteLine(Math.Pow(i,3));
+// }
+
+
+// Задача 19
+// Напишите программу, которая принимает на вход пятизначное число 
+// и проверяет, является ли оно палиндромом.
+
+// 14212 -> нет
+// 12821 -> да
+// 23432 -> да
+
+// Console.Write("Введите пятизначное число: ");
 // int number = Convert.ToInt32(Console.ReadLine());
-// int n2 = number % 100 / 10;
-// Console.WriteLine($"{number} ");
-// Console.WriteLine($"{n2} ");
-
-
-// Задача 13: Напишите программу, которая выводит третью цифру 
-// заданного числа или сообщает, что третьей цифры нет.
-
-// 645 -> 5
-// 78 -> третьей цифры нет
-// 32679 -> 6
-
-
-// Console.Write("Введите число: ");
-// int num = Convert.ToInt32(Console.ReadLine());
-// int num = Math.Abs(num);
-// int lenghtNb = 0;
-// int result = nb1;
-// while (result > 0)
+// if (number >= 100000 || number <= 9999)
 // {
-//     result = result / 10;
-//     lenghtNb++;
-// }
-// int [] arr = new int [lenghtNb];
-// for (int i = 0; i < lenghtNb; i++)
-// { 
-//     arr [i] = nb1 % 10;
-//     nb1 /= 10;
+//     Console.WriteLine($"Неправильно выполнено условие");
 // }
 
+// int number2 = number % 10;
+// int number3 = number % 100;
+// int number4 = number % 1000;
+// int number5 = number % 10000;
 
-// Задача 15: Напишите программу, которая принимает на вход цифру,
-// обозначающую день недели, и проверяет, 
-// является ли этот день выходным.
+// int res = number/10000;
+// int res5 = (number5 - number4)/1000;
+// int res4 = (number4 - number3)/100;
+// int res3 = (number3 - number2)/10;
+// int res2 = (number2);
 
-// 6 -> да
-// 7 -> да
-// 1 -> нет
-
-
-// Console.Write("Введите номер дня недели: ");
-// int daynumber = Convert.ToInt32(Console.ReadLine());
-// if (daynumber < 1 || daynumber > 7)
+// if (res == res2 && res5 == res3)
 // {
-//     Console.WriteLine($"Дня недели под таким номером не существует");
+//     Console.WriteLine($"{number} является палиндромом");
 // }
-// else if (daynumber >= 6 && daynumber <=7)
+// else
 // {
-//     Console.WriteLine($"День недели под номером {daynumber} является выходным днем");
-// }
-// else 
-// {
-//     Console.WriteLine($"День недели под номером {daynumber} является будним днем");
+//     Console.WriteLine($"{number} не палиндром");
 // }
