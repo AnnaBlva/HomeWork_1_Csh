@@ -1,50 +1,76 @@
-﻿// Задача 27: Напишите программу, которая принимает на вход число 
-// и выдаёт сумму цифр в числе.
+﻿// Задача 34: Задайте массив заполненный случайными положительными 
+// трёхзначными числами. Напишите программу, которая покажет 
+// количество чётных чисел в массиве.
 
-// 452 -> 11
-// 82 -> 10
-// 9012 -> 12
-
-// Console.WriteLine("Bведите число: ");
-// int n = Convert.ToInt32 (Console.ReadLine());
-// int sum = 0;
-// while (n > 0)
-// {
-// int num = n % 10;
-// sum = sum + num;
-// n = n / 10;
-// }
-// Console.WriteLine($"Сумма цифр равна {sum}");
+// [345, 897, 568, 234] -> 2
 
 
-// Задача 29: Напишите программу, которая задаёт массив 
-// из 8 элементов и выводит их на экран.
-
-// 1, 2, 5, 7, 19, 6, 1, 33 -> [1, 2, 5, 7, 19, 6, 1, 33]
-
-
-// int[] ar = new int[8] {1, 2, 5, 7, 19, 6, 1, 33};
+// Console.Clear();
+// int[] ar = new int[5];
+// int q = 0;
 // for (int i = 0; i < ar.Length; i++)
 // {
+//     ar[i] = new Random().Next(100, 1000);
 //     Console.Write(ar[i]);
 // }
-
-
-// Задача 25: Напишите цикл, который принимает на вход 
-// два числа (A и B) и возводит число A в натуральную степень B.
-
-// 3, 5 -> 243 (3⁵)
-// 2, 4 -> 16
-
-// Console.WriteLine("Введите число А: ");
-// int na = Convert.ToInt32 (Console.ReadLine());
-// Console.WriteLine("Введите число В: ");
-// int nb = Convert.ToInt32 (Console.ReadLine());
-// if (nb >= 0)
+// Console.WriteLine();
+// for (int i = 0; i < ar.Length; i++)
 // {
-// Console.Write($"Число {na} в степени {nb} равно {Math.Pow(na, nb)}");
-// }
-// else
+//     if (ar[i] % 2 == 0)
 // {
-//     Console.Write($"Показатель не должен быть меньше нуля");
+//       q++;
 // }
+// }
+// Console.WriteLine($"количество чётных чисел в массиве равно {q}");
+
+
+// Задача 36: Задайте одномерный массив, заполненный случайными 
+// числами. Найдите сумму элементов, стоящих на нечётных позициях.
+
+// [3, 7, 23, 12] -> 19
+// [-4, -6, 89, 6] -> 0
+
+
+// Console.Clear();
+// int[] ar = new int[7];
+// int sum = 0;
+// for (int i = 0; i < ar.Length; i++)
+// {
+//     ar[i] = new Random().Next(0, 10);
+//     Console.Write(ar[i]);
+// }
+// Console.WriteLine();
+// for (int i = 0; i < ar.Length; i = i + 2)
+// {
+//     sum = sum + ar[i];
+// }
+// Console.WriteLine($"Сумма значений на нечетных позициях {sum}");
+
+
+
+// Задача 38: Задайте массив вещественных чисел. Найдите разницу 
+// между максимальным и минимальным элементов массива.
+
+// [3 7 22 2 78] -> 76
+
+
+// Console.Clear();
+// double[] ar = new double[7];
+// for (int i = 0; i < ar.Length; i++)
+// {
+//     ar[i] = Math.Round(new Random().Next(0, 10) + new Random().NextDouble(), 2);
+//     Console.WriteLine(ar[i]);
+// }
+// Console.WriteLine();
+// double min = ar[0];
+// double max = ar[0];
+// for (int i = 1; i < ar.Length; i++)
+// {
+//     if (ar[i] > ar[0])
+//     max = ar[i];
+//     if (ar[i] < ar[0])
+//     min = ar[i];
+// }
+// double res = Math.Round(max - min, 2);
+// Console.WriteLine($"Разница между максимальным {max} и минимальным {min} значением равна {res}");
+
