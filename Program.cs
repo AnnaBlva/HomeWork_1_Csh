@@ -1,72 +1,50 @@
-﻿// Задача 21
-// Напишите программу, которая принимает на вход координаты 
-// двух точек и находит расстояние между ними в 3D пространстве.
+﻿// Задача 27: Напишите программу, которая принимает на вход число 
+// и выдаёт сумму цифр в числе.
 
-// A (3,6,8); B (2,1,-7), -> 15.84
-// A (7,-5, 0); B (1,-1,9) -> 11.53
+// 452 -> 11
+// 82 -> 10
+// 9012 -> 12
 
-// Console.WriteLine("Введите X первой точки ");
-// int X1 = Convert.ToInt32(Console.ReadLine());
-// Console.WriteLine("Введите Y первой точки ");
-// int Y1 = Convert.ToInt32(Console.ReadLine());
-// Console.WriteLine("Введите Z первой точки ");
-// int Z1 = Convert.ToInt32(Console.ReadLine());
-// Console.WriteLine("Введите X второй точки ");
-// int X2 = Convert.ToInt32(Console.ReadLine());
-// Console.WriteLine("Введите Y второй точки ");
-// int Y2 = Convert.ToInt32(Console.ReadLine());
-// Console.WriteLine("Введите Z ворой точки ");
-// int Z2 = Convert.ToInt32(Console.ReadLine());
-
-// Console.WriteLine(Math.Round(Math.Sqrt(Math.Pow((X2-X1),2) + Math.Pow((Y2-Y1),2) + Math.Pow((Z2-Z1),2)),2));
-
-
-// Задача 23
-// Напишите программу, которая принимает на вход число (N) 
-// и выдаёт таблицу кубов чисел от 1 до N.
-
-// 3 -> 1, 8, 27
-// 5 -> 1, 8, 27, 64, 125
-
-// Console.WriteLine("Введите число N ");
+// Console.WriteLine("Bведите число: ");
 // int n = Convert.ToInt32 (Console.ReadLine());
-// for (int i = 1; i <= n; i++)
+// int sum = 0;
+// while (n > 0)
 // {
-//     Console.WriteLine(Math.Pow(i,3));
+// int num = n % 10;
+// sum = sum + num;
+// n = n / 10;
+// }
+// Console.WriteLine($"Сумма цифр равна {sum}");
+
+
+// Задача 29: Напишите программу, которая задаёт массив 
+// из 8 элементов и выводит их на экран.
+
+// 1, 2, 5, 7, 19, 6, 1, 33 -> [1, 2, 5, 7, 19, 6, 1, 33]
+
+
+// int[] ar = new int[8] {1, 2, 5, 7, 19, 6, 1, 33};
+// for (int i = 0; i < ar.Length; i++)
+// {
+//     Console.Write(ar[i]);
 // }
 
 
-// Задача 19
-// Напишите программу, которая принимает на вход пятизначное число 
-// и проверяет, является ли оно палиндромом.
+// Задача 25: Напишите цикл, который принимает на вход 
+// два числа (A и B) и возводит число A в натуральную степень B.
 
-// 14212 -> нет
-// 12821 -> да
-// 23432 -> да
+// 3, 5 -> 243 (3⁵)
+// 2, 4 -> 16
 
-// Console.Write("Введите пятизначное число: ");
-// int number = Convert.ToInt32(Console.ReadLine());
-// if (number >= 100000 || number <= 9999)
+// Console.WriteLine("Введите число А: ");
+// int na = Convert.ToInt32 (Console.ReadLine());
+// Console.WriteLine("Введите число В: ");
+// int nb = Convert.ToInt32 (Console.ReadLine());
+// if (nb >= 0)
 // {
-//     Console.WriteLine($"Неправильно выполнено условие");
-// }
-
-// int number2 = number % 10;
-// int number3 = number % 100;
-// int number4 = number % 1000;
-// int number5 = number % 10000;
-
-// int res = number/10000;
-// int res5 = (number5 - number4)/1000;
-// int res4 = (number4 - number3)/100;
-// int res3 = (number3 - number2)/10;
-// int res2 = (number2);
-
-// if (res == res2 && res5 == res3)
-// {
-//     Console.WriteLine($"{number} является палиндромом");
+// Console.Write($"Число {na} в степени {nb} равно {Math.Pow(na, nb)}");
 // }
 // else
 // {
-//     Console.WriteLine($"{number} не палиндром");
+//     Console.Write($"Показатель не должен быть меньше нуля");
 // }
