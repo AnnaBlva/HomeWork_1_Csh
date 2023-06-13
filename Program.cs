@@ -1,76 +1,81 @@
-﻿// Задача 34: Задайте массив заполненный случайными положительными 
-// трёхзначными числами. Напишите программу, которая покажет 
-// количество чётных чисел в массиве.
+﻿// Задача 64: Задайте значение N. Напишите программу, которая 
+// выведет все натуральные числа в промежутке от N до 1. 
+// Выполнить с помощью рекурсии.
 
-// [345, 897, 568, 234] -> 2
-
-
-// Console.Clear();
-// int[] ar = new int[5];
-// int q = 0;
-// for (int i = 0; i < ar.Length; i++)
-// {
-//     ar[i] = new Random().Next(100, 1000);
-//     Console.Write(ar[i]);
-// }
-// Console.WriteLine();
-// for (int i = 0; i < ar.Length; i++)
-// {
-//     if (ar[i] % 2 == 0)
-// {
-//       q++;
-// }
-// }
-// Console.WriteLine($"количество чётных чисел в массиве равно {q}");
-
-
-// Задача 36: Задайте одномерный массив, заполненный случайными 
-// числами. Найдите сумму элементов, стоящих на нечётных позициях.
-
-// [3, 7, 23, 12] -> 19
-// [-4, -6, 89, 6] -> 0
-
+// N = 5 -> "5, 4, 3, 2, 1"
+// N = 8 -> "8, 7, 6, 5, 4, 3, 2, 1"
 
 // Console.Clear();
-// int[] ar = new int[7];
-// int sum = 0;
-// for (int i = 0; i < ar.Length; i++)
+// int n = InputInt("Введите положительное число");
+// int m = 1;
+// if (n < 1)
 // {
-//     ar[i] = new Random().Next(0, 10);
-//     Console.Write(ar[i]);
+//     Console.WriteLine("Ошибка ввода");
 // }
-// Console.WriteLine();
-// for (int i = 0; i < ar.Length; i = i + 2)
+// Console.WriteLine(NaturalNumber(n, m));
+
+// int NaturalNumber(int n, int m)
 // {
-//     sum = sum + ar[i];
+//     if (n == m)
+//         return n;
+//     else
+//         Console.Write($"{NaturalNumber(n, m + 1)}, ");
+//     return m;
 // }
-// Console.WriteLine($"Сумма значений на нечетных позициях {sum}");
+
+// int InputInt(string output)
+// {
+//     Console.Write(output);
+//     return int.Parse(Console.ReadLine());
+// }
 
 
+// Задача 66: Задайте значения M и N. Напишите программу, которая 
+// найдёт сумму натуральных элементов в промежутке от M до N.
 
-// Задача 38: Задайте массив вещественных чисел. Найдите разницу 
-// между максимальным и минимальным элементов массива.
-
-// [3 7 22 2 78] -> 76
-
+// M = 1; N = 15 -> 120
+// M = 4; N = 8. -> 30
 
 // Console.Clear();
-// double[] ar = new double[7];
-// for (int i = 0; i < ar.Length; i++)
+// int Prompt(string num2)
 // {
-//     ar[i] = Math.Round(new Random().Next(0, 10) + new Random().NextDouble(), 2);
-//     Console.WriteLine(ar[i]);
+//   Console.Write(num2);
+//   int result = Convert.ToInt32(Console.ReadLine());
+//   return result;
 // }
-// Console.WriteLine();
-// double min = ar[0];
-// double max = ar[0];
-// for (int i = 1; i < ar.Length; i++)
-// {
-//     if (ar[i] > ar[0])
-//     max = ar[i];
-//     if (ar[i] < ar[0])
-//     min = ar[i];
-// }
-// double res = Math.Round(max - min, 2);
-// Console.WriteLine($"Разница между максимальным {max} и минимальным {min} значением равна {res}");
 
+// int SumOfElements(int n, int m)
+// {
+//   if (n == m) return n;
+//   else return SumOfElements(n + 1, m) + n;
+// }
+
+// int n = Prompt("Input N: ");
+// int m = Prompt("Input M: ");
+
+// Console.WriteLine(SumOfElements(n, m));
+
+// Задача 68: Напишите программу вычисления функции Аккермана с помощью рекурсии.
+// Даны два неотрицательных числа m и n.
+// m = 2, n = 3 -> A(m,n) = 9
+// m = 3, n = 2 -> A(m,n) = 29
+
+// Console.Clear();
+// int Prompt(string num3)
+// {
+//   Console.Write(num3);
+//   int result = Convert.ToInt32(Console.ReadLine());
+//   return result;
+// }
+
+// int Akkerman(int m, int n)
+// {
+//   if (m == 0) return n + 1;
+//   if (m > 0 && n == 0) return Akkerman(m - 1, 1);
+//   else return Akkerman(m - 1, Akkerman(m, n - 1));
+// }
+
+// int m = Prompt("Input M: ");
+// int n = Prompt("Input N: ");
+
+// Console.WriteLine($"A({m},{n}) = {Akkerman(m, n)}");
